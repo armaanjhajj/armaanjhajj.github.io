@@ -3,66 +3,91 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Armaan Jhajj</title>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap" rel="stylesheet">
+  <title>armaanjhajj</title>
+  <link rel="icon" type="image/png" href="https://upload.wikimedia.org/wikipedia/commons/2/26/Minimalism_logo.png">
+  <link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
   <style>
     body {
       margin: 0;
-      font-family: 'Inter', sans-serif;
-      background: linear-gradient(to right, #0f2027, #203a43, #2c5364);
-      color: white;
+      padding: 0;
+      background-color: #000;
+      color: #fff;
+      font-family: 'Space Mono', monospace;
       display: flex;
       flex-direction: column;
       align-items: center;
       justify-content: center;
       height: 100vh;
       text-align: center;
-      opacity: 0;
-      animation: fadeIn 1s ease-out forwards;
-    }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 0.5rem;
-    }
-    p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      max-width: 600px;
-    }
-    .links a {
-      display: inline-block;
-      margin: 0 15px;
-      text-decoration: none;
-      color: #00ffff;
-      font-weight: bold;
-      border: 2px solid #00ffff;
-      padding: 10px 20px;
-      border-radius: 8px;
-      transition: background 0.3s, color 0.3s, transform 0.3s;
-      animation: float 2.5s ease-in-out infinite;
-    }
-    .links a:hover {
-      background: #00ffff;
-      color: #000;
-      transform: translateY(-3px);
     }
 
-    @keyframes fadeIn {
-      to { opacity: 1; }
+    h1 {
+      font-size: 2rem;
+      font-weight: normal;
+      margin-bottom: 0.5rem;
     }
-    @keyframes float {
-      0%, 100% { transform: translateY(0); }
-      50% { transform: translateY(-5px); }
+
+    p {
+      font-size: 1rem;
+      color: #888;
+      margin-bottom: 2rem;
+    }
+
+    .links {
+      display: flex;
+      gap: 20px;
+      align-items: center;
+    }
+
+    .links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 40px;
+      height: 40px;
+      border: 1px solid white;
+      border-radius: 50%;
+      transition: all 0.3s ease;
+      filter: invert(100%);
+    }
+
+    .links a:hover {
+      background-color: #fff;
+      filter: invert(0%);
+    }
+
+    .links img {
+      width: 20px;
+      height: 20px;
+    }
+
+    .divider {
+      color: #444;
+      font-size: 1.2rem;
+      margin: 0 10px;
+      user-select: none;
     }
   </style>
 </head>
 <body>
-  <h1>Hey, I'm Armaan Jhajj 👋</h1>
-  <p>fish dont notice they're wet</p>
+  <h1>armaanjhajj</h1>
+  <p>fish don't realize they're wet</p>
   <div class="links">
-    <a href="mailto:armaanjhajj05@gmail.com">Email</a>
-    <a href="https://github.com/armaanjhajj" target="_blank">GitHub</a>
-    <a href="https://www.linkedin.com/in/armaanjhajj" target="_blank">LinkedIn</a>
+    <a href="mailto:armaanjhajj@gmail.com" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.svg" alt="Gmail" />
+    </a>
+    <span class="divider">|</span>
+    <a href="https://www.instagram.com/armaanjhajj_/" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+    </a>
+    <span class="divider">|</span>
+    <a href="https://github.com/armaanjhajj" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" />
+    </a>
+    <span class="divider">|</span>
+    <a href="https://www.linkedin.com/in/armaanjhajj" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn" />
+    </a>
   </div>
 </body>
 </html>
