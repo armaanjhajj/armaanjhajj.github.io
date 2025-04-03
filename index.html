@@ -17,6 +17,8 @@
       justify-content: center;
       height: 100vh;
       text-align: center;
+      opacity: 0;
+      animation: fadeIn 1s ease-out forwards;
     }
     h1 {
       font-size: 3rem;
@@ -36,19 +38,29 @@
       border: 2px solid #00ffff;
       padding: 10px 20px;
       border-radius: 8px;
-      transition: background 0.3s, color 0.3s;
+      transition: background 0.3s, color 0.3s, transform 0.3s;
+      animation: float 2.5s ease-in-out infinite;
     }
     .links a:hover {
       background: #00ffff;
       color: #000;
+      transform: translateY(-3px);
+    }
+
+    @keyframes fadeIn {
+      to { opacity: 1; }
+    }
+    @keyframes float {
+      0%, 100% { transform: translateY(0); }
+      50% { transform: translateY(-5px); }
     }
   </style>
 </head>
 <body>
   <h1>Hey, I'm Armaan Jhajj 👋</h1>
-  <p>fish don't realize they're wet</p>
+  <p>Welcome to my digital corner — I'm a builder, a thinker, and someone who's just getting started. Stick around for updates on projects, passions, and whatever's next.</p>
   <div class="links">
-    <a href="mailto:armaan@armaanjhajj.com">Email</a>
+    <a href="mailto:armaanjhajj05@gmail.com">Email</a>
     <a href="https://github.com/armaanjhajj" target="_blank">GitHub</a>
     <a href="https://www.linkedin.com/in/armaanjhajj" target="_blank">LinkedIn</a>
   </div>
