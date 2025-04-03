@@ -26,7 +26,7 @@
       font-size: 2rem;
       font-weight: normal;
       margin-bottom: 0.5rem;
-      animation: pulse-spacing 6s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+      animation: pulse-spacing 4s ease-in-out infinite;
     }
 
     
@@ -87,7 +87,7 @@
     }
 
     .links a:hover {
-      background-color: #fff;
+      
     }
 
     .links img {
@@ -107,7 +107,13 @@
       margin-top: 1.5rem;
     }
   @keyframes pulse-spacing {
-      0% { letter-spacing: normal; }
+  0% { letter-spacing: normal; }
+  20% { letter-spacing: normal; }
+  40% { letter-spacing: 0.5em; }
+  50% { letter-spacing: 0.5em; }
+  70% { letter-spacing: normal; }
+  100% { letter-spacing: normal; }
+}
       40% { letter-spacing: 0.5em; }
       50% { letter-spacing: 0.5em; }
       100% { letter-spacing: normal; }
@@ -127,7 +133,7 @@
   <div class="resume-link" style="margin-top: 1rem; margin-bottom: 3rem;">
     <a href="https://drive.google.com/uc?export=download&id=1FSnblRDv-Kw4PPABMOMMEDtFs7g84gul" download>resume</a>
   </div>
-  <div class="about-toggle" onclick="toggleAbout()">about me</div>
+  <div class="about-toggle" style="margin-bottom: 2rem;">about me</div>
   <div class="about-section" id="about">
     I’m a Rutgers student exploring where medicine and machine learning intersect. My goal is to build tools that make healthcare more precise, more accessible, and more human — using AI to support clinical decision-making, not replace it. Gym head. Indie rock fiend. Sweet treat enjoyer. Drake on repeat.
   </div>
