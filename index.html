@@ -26,7 +26,7 @@
       font-size: 2rem;
       font-weight: normal;
       margin-bottom: 0.5rem;
-      animation: pulse-spacing 3s ease-in-out infinite;
+      animation: pulse-spacing 3s linear infinite;
     }
 
     
@@ -106,8 +106,12 @@
       border: none;
       margin-top: 1.5rem;
     }
-  @keyframes pulse-spacing {
-  0% { letter-spacing: normal; }
+  
+  25% { letter-spacing: 0.5em; }
+  50% { letter-spacing: normal; }
+  75% { letter-spacing: 0.5em; }
+  100% { letter-spacing: normal; }
+}
   10% { letter-spacing: normal; }
   35% { letter-spacing: 0.5em; }
   45% { letter-spacing: 0.5em; }
