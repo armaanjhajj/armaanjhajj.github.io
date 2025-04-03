@@ -19,17 +19,57 @@
       justify-content: center;
       height: 100vh;
       text-align: center;
+      overflow: hidden;
     }
 
     h1 {
       font-size: 2rem;
       font-weight: normal;
       margin-bottom: 0.5rem;
+      animation: pulse-spacing 4s ease-in-out infinite;
     }
 
-    p {
+    
+
+    .tagline {
       font-size: 1rem;
       color: #888;
+      margin-bottom: 0.3rem;
+    }
+
+    .subtext {
+      font-size: 0.85rem;
+      color: #555;
+      margin-bottom: 1.5rem;
+    }
+
+    .resume-link {
+      margin-bottom: 2rem;
+    }
+
+    .resume-link a {
+      color: #888;
+      font-size: 0.9rem;
+      text-decoration: none;
+    }
+
+    .resume-link a:hover {
+      color: #fff;
+    }
+
+    .about-toggle {
+      font-size: 0.8rem;
+      color: #666;
+      cursor: pointer;
+      text-decoration: underline;
+      margin-bottom: 1rem;
+    }
+
+    .about-section {
+      display: none;
+      max-width: 400px;
+      color: #aaa;
+      font-size: 0.85rem;
       margin-bottom: 2rem;
     }
 
@@ -48,17 +88,16 @@
       border: 1px solid white;
       border-radius: 50%;
       transition: all 0.3s ease;
-      filter: invert(100%);
+      background-color: black;
     }
 
     .links a:hover {
       background-color: #fff;
-      filter: invert(0%);
     }
 
     .links img {
-      width: 20px;
-      height: 20px;
+      width: 24px;
+      height: 24px;
     }
 
     .divider {
@@ -67,27 +106,56 @@
       margin: 0 10px;
       user-select: none;
     }
+
+    iframe {
+      border: none;
+      margin-top: 1.5rem;
+    }
+  @keyframes pulse-spacing {
+      0% { letter-spacing: normal; transform: translateY(0); }
+      50% { letter-spacing: 0.5em; transform: translateY(-2px); }
+      100% { letter-spacing: normal; transform: translateY(0); }
+    }
   </style>
 </head>
 <body>
   <h1>armaanjhajj</h1>
-  <p>fish don't realize they're wet</p>
+  <p class="tagline">fish don't realize they're wet</p>
+  
+  <div class="resume-link">
+    <a href="https://drive.google.com/uc?export=download&id=1FSnblRDv-Kw4PPABMOMMEDtFs7g84gul" download>resume</a>
+  </div>
+  <div class="about-toggle" onclick="toggleAbout()">about me</div>
+  <div class="about-section" id="about">
+    I’m a Rutgers student exploring where medicine and machine learning intersect. My goal is to build tools that make healthcare more precise, more accessible, and more human — using AI to support clinical decision-making, not replace it. Gym head. Indie rock fiend. Sweet treat enjoyer. Drake on repeat.
+  </div>
   <div class="links">
-    <a href="mailto:armaanjhajj@gmail.com" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/4/4e/Gmail_Icon.svg" alt="Gmail" />
+    <a href="mailto:armaanjhajj05@gmail.com" target="_blank">
+      <img src="https://i.pinimg.com/736x/39/a5/ae/39a5ae84afcd8cd690f37e65f7d94798.jpg" alt="Email" />
     </a>
     <span class="divider">|</span>
     <a href="https://www.instagram.com/armaanjhajj_/" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram" />
+      <img src="https://www.pngkey.com/png/full/1-13374_instagram-icon-new-black-background-vector-logo-instagram.png" alt="Instagram" />
+    </a>
+    <span class="divider">|</span>
+    <a href="https://www.linkedin.com/in/armaanjhajj" target="_blank">
+      <img src="https://i.pinimg.com/736x/5f/41/86/5f4186241d82a73e0e6f9f572585348d.jpg" alt="LinkedIn" />
+    </a>
+    <span class="divider">|</span>
+    <a href="https://open.spotify.com/user/ninja.star.fighter" target="_blank">
+      <img src="https://i.pinimg.com/736x/45/cc/6c/45cc6c91692a3665d97b570a3272132a.jpg" alt="Spotify" />
     </a>
     <span class="divider">|</span>
     <a href="https://github.com/armaanjhajj" target="_blank">
       <img src="https://upload.wikimedia.org/wikipedia/commons/9/91/Octicons-mark-github.svg" alt="GitHub" />
     </a>
-    <span class="divider">|</span>
-    <a href="https://www.linkedin.com/in/armaanjhajj" target="_blank">
-      <img src="https://upload.wikimedia.org/wikipedia/commons/8/81/LinkedIn_icon.svg" alt="LinkedIn" />
-    </a>
   </div>
+  
+  <script>
+    function toggleAbout() {
+      const about = document.getElementById('about');
+      about.style.display = about.style.display === 'block' ? 'none' : 'block';
+    }
+  </script>
 </body>
 </html>
