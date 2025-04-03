@@ -26,10 +26,16 @@
       font-size: 2rem;
       font-weight: normal;
       margin-bottom: 0.5rem;
-      animation: pulse-spacing 3s linear infinite;
+      animation: pulse-spacing 3s ease-in-out infinite;
     }
 
-    
+    @keyframes pulse-spacing {
+      0% { letter-spacing: normal; }
+      25% { letter-spacing: 0.5em; }
+      50% { letter-spacing: normal; }
+      75% { letter-spacing: 0.5em; }
+      100% { letter-spacing: normal; }
+    }
 
     .tagline {
       font-size: 1rem;
@@ -62,7 +68,7 @@
       color: #666;
       cursor: pointer;
       text-decoration: underline;
-      margin-bottom: 1rem;
+      margin-bottom: 2rem;
     }
 
     .about-section {
@@ -86,10 +92,6 @@
       transition: all 0.3s ease;
     }
 
-    .links a:hover {
-      
-    }
-
     .links img {
       width: 24px;
       height: 24px;
@@ -106,35 +108,7 @@
       border: none;
       margin-top: 1.5rem;
     }
-  
-  25% { letter-spacing: 0.5em; }
-  50% { letter-spacing: normal; }
-  75% { letter-spacing: 0.5em; }
-  100% { letter-spacing: normal; }
-}
-  10% { letter-spacing: normal; }
-  35% { letter-spacing: 0.5em; }
-  45% { letter-spacing: 0.5em; }
-  70% { letter-spacing: normal; }
-  100% { letter-spacing: normal; }
-}
-  20% { letter-spacing: normal; }
-  40% { letter-spacing: 0.5em; }
-  50% { letter-spacing: 0.5em; }
-  70% { letter-spacing: normal; }
-  100% { letter-spacing: normal; }
-}
-      40% { letter-spacing: 0.5em; }
-      50% { letter-spacing: 0.5em; }
-      100% { letter-spacing: normal; }
-    }
-      50% { letter-spacing: 0.5em; }
-      100% { letter-spacing: normal; }
-    }
-      50% { letter-spacing: 0.5em; transform: translateY(-2px); }
-      100% { letter-spacing: normal; transform: translateY(0); }
-    }
-  </style>
+</style>
 </head>
 <body>
   <h1>armaanjhajj</h1>
