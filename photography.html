@@ -5,33 +5,158 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Photography – armaanjhajj</title>
   <link rel="icon" type="image/png" href="https://i.imgur.com/9vZBHkB.png">
+  <link href="https://fonts.googleapis.com/css2?family=Gaegu&display=swap" rel="stylesheet">
   <style>
     body {
+      margin: 0;
+      padding: 0;
       background-color: #000;
       color: #fff;
       font-family: 'Gaegu', cursive;
-      padding: 3rem;
-      margin: 0;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 3rem 1.5rem;
+      line-height: 1.8;
+      overflow-x: hidden;
     }
-    h1 {
-      font-size: 3rem;
-      margin-bottom: 1rem;
+
+    .fade-in {
+      opacity: 0;
+      animation: fadeIn 2s ease-in-out forwards;
     }
-    p {
+
+    @keyframes fadeIn {
+      to {
+        opacity: 1;
+      }
+    }
+
+    .container {
+      max-width: 1200px;
+      display: flex;
+      flex-direction: column;
+      gap: 3rem;
+      width: 100%;
+    }
+
+    .intro {
+      text-align: center;
+      animation: floatIn 1.8s ease-out forwards;
+    }
+
+    @keyframes floatIn {
+      0% {
+        transform: translateY(20px);
+        opacity: 0;
+      }
+      100% {
+        transform: translateY(0);
+        opacity: 1;
+      }
+    }
+
+    .intro h1 {
+      font-size: 4rem;
+      margin-bottom: 0.5rem;
+      color: #f5f5f5;
+    }
+
+    .intro p {
       font-size: 1.5rem;
-      color: #aaa;
+      color: #bbb;
     }
-    a {
-      color: #888;
-      text-decoration: underline;
+
+    .gallery {
+      display: flex;
+      flex-direction: column;
+      gap: 5rem;
+      margin-top: 4rem;
     }
-  </style>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Gaegu&display=swap');
+
+    .photo-block {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+
+    .photo-block:nth-child(even) {
+      align-items: flex-end;
+    }
+
+    .photo-block img {
+      max-width: 100%;
+      height: auto;
+      box-shadow: 0 0 25px rgba(255, 255, 255, 0.08);
+    }
+
+    .caption {
+      margin-top: 0.5rem;
+      font-size: 1.1rem;
+      color: #999;
+    }
+
+    .home-button {
+      margin-top: 4rem;
+      padding: 0.75rem 2rem;
+      font-size: 1.2rem;
+      font-family: 'Gaegu', cursive;
+      background-color: transparent;
+      border: 2px solid #888;
+      color: #fff;
+      cursor: pointer;
+      border-radius: 12px;
+      transition: all 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+      text-align: center;
+    }
+
+    .home-button:hover {
+      background-color: #fff;
+      color: #000;
+      border-color: #fff;
+      box-shadow: 0 0 12px #fff;
+    }
   </style>
 </head>
 <body>
-  <h1>Photography</h1>
-  <p>Here you'll find my favorite shots, moments, and visual stories.</p>
+  <div class="container fade-in">
+    <div class="intro">
+      <h1>Photography</h1>
+      <p>Here you'll find my favorite shots, moments, and visual stories.</p>
+    </div>
+
+    <div class="gallery">
+
+      <div class="photo-block">
+        <img src="https://i.imgur.com/4s9mpAl.jpeg" alt="Basketball">
+        <div class="caption">BASKY BALL – LIVINGSTON RECREATIONAL CENTER</div>
+      </div>
+      <div class="photo-block">
+        <img src="https://i.imgur.com/kxZFOeD.jpeg" alt="Funny guy">
+        <div class="caption">FUNNY GUY – BIGGIE (HE FELL IN THE WATER BEFORE THIS)</div>
+      </div>
+      <div class="photo-block">
+        <img src="https://i.imgur.com/QtrvZCE.jpeg" alt="Elk">
+        <div class="caption">ELK – ROCKY MOUNTAINS NATIONAL PARK</div>
+      </div>
+      <div class="photo-block">
+        <img src="https://i.imgur.com/KhOrelq.jpeg" alt="Tree">
+        <div class="caption">TREE – ROCKY MOUTAIN NATIONAL PARK</div>
+      </div>
+      <div class="photo-block">
+        <img src="https://i.imgur.com/24ek3ti.jpeg" alt="Snowy road">
+        <div class="caption">SNOWY ROAD – SOMEWHERE IN COLORADO</div>
+      </div>
+      <div class="photo-block">
+        <img src="https://i.imgur.com/pMKsTYs.jpeg" alt="Malcolm Todd">
+        <div class="caption">MALCOLM TODD – COURTESSY OF THE MACCY TODDLERS</div>
+      </div>
+
+    </div>
+
+    <a href="https://armaanjhajj.com" class="home-button">← Back to Home</a>
+  </div>
 </body>
 </html>
