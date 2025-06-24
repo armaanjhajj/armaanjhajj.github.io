@@ -69,14 +69,14 @@
   </style>
 </head>
 <body>
-  <h1>Entry 1: Debugging My Very Wrong Guesses</h1>
+  <h1>Entry 1: i've been procrastinating...</h1>
   <p class="subtitle">A walk through three C problems that taught me how to stop worrying and love the segfault.</p>
 
-  <img src="https://i.imgur.com/f4a25771-e6a7-406e-90bc-ccecc49629d9.png" alt="Code Debugging Vibes">
+  <img src="https://i.imgur.com/09Yc3id.jpeg" alt="POV lol">
 
-  <p>I have been procrastinating. I kept telling myself I’d start documenting my progress as a software engineer, but every time I opened my editor, I ended up doing literally anything else.</p>
+  <p>I've been procrastinating. I've been meaning to start writing these almost a month ago but have just been rotting away since summer started (which was much needed tbh) but here it goes! The goal for this blog is to kinda document my progress as a dev and talk through my thought process as I learn new stuff in my CS classes at uni and just personal projects that I randomly pick up. end goal is to basically get better at this stuff by talking to myself and i guess putting it out there to see for anyone interested. </p>
 
-  <p>So here's how I got forced into it — with an assignment from my computer architecture class. We had to complete three programming problems in C, each testing a different concept: string parsing, sorting structs, and assignment-based data aggregation.</p>
+  <p>So here's how i'm forcing myself to get started: an assignment from my computer architecture class. We had to complete three programming problems in C, each testing a different concept: string parsing, sorting structs, and assignment-based data aggregation.</p>
 
   <p>Let’s walk through them.</p>
 
@@ -102,23 +102,23 @@ name[i] = 0;</code></pre>
   <p>Yeah, I didn’t know you could do that either — that return line basically subtracts two boolean expressions to sort descending. Beautifully cursed.</p>
 
   <h2>Problem 3 – Class Statistics</h2>
-  <p>This one was a beast. The assignment codes (P, A, Z, etc.) could come in any order, and we had to track min, max, and average for each category. I learned real fast that mixing up indices was a one-way ticket to junk output.</p>
+  <p>The assignment codes (P, A, Z, etc.) could come in any order, and we had to track min, max, and average for each category. I learned really fast that mixing up indices would mess up everything.</p>
 
   <pre><code>printf("ASSIGNMENT: %s\n", fullName(codes[j]));
 printf("MIN: %d\n", min);
 printf("MAX: %d\n", max);
 printf("AVG: %.1f\n\n", avg);</code></pre>
 
-  <p>All that after storing grades in a 2D array and keeping careful track of totals across nested loops. Shoutout to whoever invented for-loops. Real ones.</p>
+  <p>All that after storing grades in a 2D array and keeping careful track of totals across nested loops. Shoutout to whoever invented for-loops.</p>
 
   <div class="signoff">
-    I'm slowly realizing that being a good software engineer isn't about knowing all the answers — it's about knowing how to debug your very wrong guesses.
+    I'm slowly realizing that being a good software engineer isn't about knowing all the answers — it's about knowing how to debug your very wrong guesses. That was really corny actually mb.. i just mean like it takes a lot of trial and error cus this was a painstakingly long process
     <br><br>
-    These three problems taught me:
+    These three problems taught me (specifically in C cus it was such a weird change from Java or Python):
     <ul>
       <li>Think step-by-step, especially when parsing or looping.</li>
       <li>Keep your input files clean and consistent.</li>
-      <li>Don’t fear GDB — it’s a flashlight in the dark.</li>
+      <li>Don’t fear GDB</li>
     </ul>
     Anyway. This is Entry 1. Hopefully not the last.
     <br>
