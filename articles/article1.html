@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Lorem Ipsum – armaanjhajj</title>
+  <title>Entry 1 – armaanjhajj</title>
   <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
   <style>
     body {
@@ -60,25 +60,72 @@
       background-color: #fff;
       color: #000;
     }
+
+    .signoff {
+      margin-top: 3rem;
+      font-style: italic;
+      color: #ccc;
+    }
   </style>
 </head>
 <body>
-  <h1>Lorem Ipsum Dolor Sit Amet</h1>
-  <p class="subtitle">A short description of this article goes right here for some context.</p>
+  <h1>Entry 1: Debugging My Very Wrong Guesses</h1>
+  <p class="subtitle">A walk through three C problems that taught me how to stop worrying and love the segfault.</p>
 
-  <img src="https://i.imgur.com/f4a25771-e6a7-406e-90bc-ccecc49629d9.png" alt="Article Main Image">
+  <img src="https://i.imgur.com/f4a25771-e6a7-406e-90bc-ccecc49629d9.png" alt="Code Debugging Vibes">
 
-  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis nec lorem arcu. Integer sodales, justo in ultrices placerat, justo ligula laoreet tellus, id pretium libero risus non purus.</p>
-  <p>Here’s a code snippet embedded in the article:</p>
+  <p>I have been procrastinating. I kept telling myself I’d start documenting my progress as a software engineer, but every time I opened my editor, I ended up doing literally anything else.</p>
 
-  <pre><code>// JavaScript example
-function greet(name) {
-  return `Hello, ${name}!`;
+  <p>So here's how I got forced into it — with an assignment from my computer architecture class. We had to complete three programming problems in C, each testing a different concept: string parsing, sorting structs, and assignment-based data aggregation.</p>
+
+  <p>Let’s walk through them.</p>
+
+  <h2>Problem 1 – Weighted Student Grades</h2>
+  <p>We had to read weights from a file and calculate weighted averages for 20 students. Here's the basic idea:</p>
+
+  <pre><code>while ((c = fgetc(file)) != '\t' && c != EOF) {
+  name[i++] = c;
 }
-console.log(greet("Armaan"));
-</code></pre>
+name[i] = 0;</code></pre>
 
-  <p>More body text goes here... Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.</p>
+  <p>This little loop reads the student’s name until it hits a tab character. Took me a while to realize how fragile tab-delimited parsing can be. One wrong keystroke in the input file and you're printing garbage.</p>
+
+  <h2>Problem 2 – Sorting Students by GPA</h2>
+  <p>Next we had to sort 100 students by GPA using <code>qsort</code>. This was surprisingly painless once I wrote the comparison function:</p>
+
+  <pre><code>int compare(const void *a, const void *b) {
+  const struct Student *x = a;
+  const struct Student *y = b;
+  return (y->gpa > x->gpa) - (y->gpa < x->gpa);
+}</code></pre>
+
+  <p>Yeah, I didn’t know you could do that either — that return line basically subtracts two boolean expressions to sort descending. Beautifully cursed.</p>
+
+  <h2>Problem 3 – Class Statistics</h2>
+  <p>This one was a beast. The assignment codes (P, A, Z, etc.) could come in any order, and we had to track min, max, and average for each category. I learned real fast that mixing up indices was a one-way ticket to junk output.</p>
+
+  <pre><code>printf("ASSIGNMENT: %s\n", fullName(codes[j]));
+printf("MIN: %d\n", min);
+printf("MAX: %d\n", max);
+printf("AVG: %.1f\n\n", avg);</code></pre>
+
+  <p>All that after storing grades in a 2D array and keeping careful track of totals across nested loops. Shoutout to whoever invented for-loops. Real ones.</p>
+
+  <div class="signoff">
+    I'm slowly realizing that being a good software engineer isn't about knowing all the answers — it's about knowing how to debug your very wrong guesses.
+    <br><br>
+    These three problems taught me:
+    <ul>
+      <li>Think step-by-step, especially when parsing or looping.</li>
+      <li>Keep your input files clean and consistent.</li>
+      <li>Don’t fear GDB — it’s a flashlight in the dark.</li>
+    </ul>
+    Anyway. This is Entry 1. Hopefully not the last.
+    <br>
+    Back to procrastinating.
+    <br><br>
+    – Armaan
+  </div>
 
   <a class="home-button" href="../weblog.html">← back to weblog</a>
 </body>
