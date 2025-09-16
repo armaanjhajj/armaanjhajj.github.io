@@ -6,9 +6,7 @@
     "dev": "next dev --turbopack",
     "build": "next build --turbopack",
     "start": "next start",
-    "lint": "eslint",
-    "postbuild": "node scripts/postbuild.js || true",
-    "sitemap": "next-sitemap"
+    "lint": "eslint"
   },
   "dependencies": {
     "@mdx-js/react": "^3.1.1",
