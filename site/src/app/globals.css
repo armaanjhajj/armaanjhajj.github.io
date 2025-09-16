@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+:root {
+  --background: #ffffff;
+  --foreground: #0f172a;
+  --muted: #6b7280;
+  --border: #e5e7eb;
+  --accent: #2563eb; /* electric blue */
+}
+
+@theme inline {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-muted: var(--muted);
+  --color-border: var(--border);
+  --color-accent: var(--accent);
+  --font-sans: var(--font-inter);
+  --font-display: var(--font-poppins);
+}
+
+@media (prefers-color-scheme: dark) {
+  :root {
+    --background: #0a0a0a;
+    --foreground: #e5e7eb;
+    --muted: #9ca3af;
+    --border: #1f2937;
+    --accent: #60a5fa;
+  }
+}
+
+html, body {
+  height: 100%;
+}
+
+body {
+  background: var(--background);
+  color: var(--foreground);
+}
+
+/* Smooth underline links */
+a {
+  text-underline-offset: 3px;
+}
+
+/* Prose tweaks for MDX */
+.prose {
+  --tw-prose-body: var(--foreground);
+  --tw-prose-headings: var(--foreground);
+  --tw-prose-links: var(--accent);
+  --tw-prose-bold: var(--foreground);
+  --tw-prose-counters: var(--muted);
+  --tw-prose-bullets: var(--muted);
+  --tw-prose-hr: var(--border);
+  --tw-prose-quotes: var(--foreground);
+  --tw-prose-quote-borders: var(--border);
+  --tw-prose-captions: var(--muted);
+  --tw-prose-code: var(--foreground);
+  --tw-prose-pre-code: var(--foreground);
+  --tw-prose-pre-bg: #0b1220;
+  --tw-prose-th-borders: var(--border);
+  --tw-prose-td-borders: var(--border);
+}
