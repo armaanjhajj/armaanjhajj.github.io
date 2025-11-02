@@ -3,143 +3,25 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>About – armaanjhajj</title>
+  <title>about – armaanjhajj</title>
   <link rel="icon" type="image/png" href="https://i.imgur.com/9vZBHkB.png">
-  <link href="https://fonts.googleapis.com/css2?family=Roboto+Mono&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
   <style>
-    body {
-      margin: 0;
-      padding: 0;
-      background-color: #000;
-      color: #fff;
-      font-family: 'Roboto Mono', monospace;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 3rem 1.5rem;
-      line-height: 1.8;
-      overflow-x: hidden;
-    }
-
-    .fade-in {
-      opacity: 0;
-      animation: fadeIn 2s ease-in-out forwards;
-    }
-
-    @keyframes fadeIn {
-      to {
-        opacity: 1;
-      }
-    }
-
-    .container {
-      max-width: 900px;
-      display: flex;
-      flex-direction: column;
-      gap: 2rem;
-    }
-
-    .intro {
-      text-align: center;
-      animation: floatIn 1.8s ease-out forwards;
-    }
-
-    @keyframes floatIn {
-      0% {
-        transform: translateY(20px);
-        opacity: 0;
-      }
-      100% {
-        transform: translateY(0);
-        opacity: 1;
-      }
-    }
-
-    .intro h1 {
-      font-size: 4rem;
-      margin-bottom: 0.5rem;
-      color: #f5f5f5;
-    }
-
-    .intro p {
-      font-size: 1.5rem;
-      color: #bbb;
-    }
-
-    .pfp {
-      width: 240px;
-      height: 240px;
-      object-fit: cover;
-      margin: 1.5rem auto;
-      box-shadow: 0 0 30px rgba(255, 255, 255, 0.12);
-      transition: transform 0.6s ease;
-    }
-
-    .pfp:hover {
-      transform: scale(1.05) rotate(1deg);
-    }
-
-    .content {
-      font-size: 1.3rem;
-      color: #ccc;
-      white-space: pre-line;
-      text-align: justify;
-    }
-
-    .music-list {
-      margin: 1rem 0 2rem 1.5rem;
-      font-size: 1.1rem;
-      color: #aaa;
-    }
-
-    .music-list li {
-      margin-bottom: 0.4rem;
-    }
-
-    .home-button {
-      margin-top: 3rem;
-      padding: 0.75rem 2rem;
-      font-size: 1.2rem;
-      font-family: 'Roboto Mono', monospace;
-      background-color: transparent;
-      border: 2px solid #888;
-      color: #fff;
-      cursor: pointer;
-      border-radius: 12px;
-      transition: all 0.3s ease;
-      text-decoration: none;
-      display: inline-block;
-      text-align: center;
-    }
-
-    .home-button:hover {
-      background-color: #fff;
-      color: #000;
-      border-color: #fff;
-      box-shadow: 0 0 12px #fff;
-    }
+    body { margin:0; background:#fff; color:#111; font-family: 'Playfair Display', Georgia, serif; }
+    main { max-width: 820px; margin: 4rem auto; padding: 0 1.25rem; }
+    h1 { margin: 0 0 1rem; font-style: italic; font-size: clamp(1.8rem,4vw,2.6rem); }
+    p { line-height: 1.7; color:#333; }
+    .contact { margin-top: 1.4rem; color:#444; }
+    nav { margin-top: 1.6rem; }
   </style>
 </head>
 <body>
-  <div class="container fade-in">
-    <div class="intro">
-      <h1>hey there!</h1>
-      <p>thanks for checking out my portfolio.</p>
-    </div>
-
-    <div class="content">
-      My name’s Armaan. I’m a student at Rutgers University pursuing a B.S. in Computer Science and Chemistry with a concentration in Data Science. I’ve always been drawn to both healthcare and technology (prob cus of the fact that my dad’s an engineer and my mom’s a doctor), and I’m planning to go into medicine. I’m especially fascinated by the growing space where these fields meet and hope to contribute to tech-driven solutions that make modern healthcare more efficient, accessible, and honestly—better.
-
-      Outside of school (and work), you’ll usually find me lifting at the gym, out on a run, hanging with friends, or folding and caving into a late-night Valorant match. If you asked my friends to tell you one stupid thing about me, they’d probably mention how my Spotify Wrapped ends up clocking in at like half a million minutes because I’m basically always listening to music.
-      
-      i had a lot more written but it was kinda corny... if you want to get to know me more feel free to reach out at: 
-      - armaan.jhajj@rutgers.edu
-      - +1 (908) - 476 - 8622
-      
-      Anyways, i tried asking chatgpt for a cool one-liner to sign off with but it sucked. hope this helps! :D
-    </div>
-
-    <a href="https://armaanjhajj.com" class="home-button">← back to home</a>
-  </div>
+  <main>
+    <h1>about</h1>
+    <p>i’m armaan jhajj (maaj), a third-year cs and chem student at rutgers, an emt, and a co-founder of moments. besides being an emt, i’ve done a research internship in computational chemistry at brookhaven national lab (bnl) and two rounds of internships as a medical assistant at different private practices. i also technically work for myself at moments, trying to build something that helps people feel less disconnected.</p>
+    <p>i enjoy music, energy drinks and being performative.</p>
+    
+    <nav><a href="/">home</a></nav>
+  </main>
 </body>
 </html>
