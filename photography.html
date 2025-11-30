@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>photography – armaan jhajj</title>
+  <link rel="icon" type="image/png" href="https://i.imgur.com/9vZBHkB.png">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&display=swap" rel="stylesheet">
+  <style>
+    body { 
+      margin:0; 
+      background:#fff; 
+      color:#111; 
+      font-family: 'Playfair Display', Georgia, serif; 
+    }
+    main { 
+      max-width: 1200px; 
+      margin: 4rem auto; 
+      padding: 0 1.25rem; 
+    }
+    h1 { 
+      margin: 0 0 0.5rem; 
+      font-style: italic; 
+      font-size: clamp(1.8rem,4vw,2.6rem); 
+      text-align: center; 
+    }
+    p { 
+      color: #555; 
+      font-style: italic; 
+      margin-bottom: 3rem; 
+      text-align: center; 
+    }
+    
+    .gallery {
+      column-count: 3;
+      column-gap: 3px;
+      margin-bottom: 3rem;
+    }
+    
+    .gallery-item {
+      position: relative;
+      cursor: pointer;
+      transition: opacity 0.3s ease;
+      background: #f9f9f9;
+      break-inside: avoid;
+      margin-bottom: 3px;
+      display: block;
+    }
+    
+    .gallery-item:hover {
+      opacity: 0.85;
+    }
+    
+    .gallery-item img {
+      width: 100%;
+      height: auto;
+      display: block;
+    }
+    
+    @media (max-width: 768px) {
+      .gallery {
+        column-count: 2;
+        column-gap: 2px;
+      }
+    }
+    
+    /* Lightbox */
+    .lightbox {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: rgba(0,0,0,0.95);
+      z-index: 1000;
+      justify-content: center;
+      align-items: center;
+      padding: 2rem;
+    }
+    
+    .lightbox.active {
+      display: flex;
+    }
+    
+    .lightbox-content {
+      max-width: 90%;
+      max-height: 90%;
+      object-fit: contain;
+    }
+    
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      color: white;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      font-family: system-ui, -apple-system, sans-serif;
+      line-height: 1;
+    }
+    
+    .lightbox-nav {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      color: white;
+      font-size: 40px;
+      cursor: pointer;
+      padding: 20px;
+      user-select: none;
+      font-family: system-ui, -apple-system, sans-serif;
+    }
+    
+    .lightbox-prev { left: 20px; }
+    .lightbox-next { right: 20px; }
+    
+    nav { 
+      margin-top: 2rem; 
+      text-align: center; 
+    }
+    a { 
+      color: #4b2ca0; 
+      text-decoration: underline; 
+    }
+    
+    @media (max-width: 768px) {
+      .gallery {
+        grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+        gap: 1rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>photography</h1>
+    <p>shot on Sony a6000 // edited in Adobe Lightroom</p>
+    
+    <div class="gallery" id="gallery">
+      <div class="gallery-item" data-src="images/photography/1-IMG_6873.jpg" data-type="image">
+        <img src="images/photography/1-IMG_6873.jpg" alt="Photography by Armaan Jhajj" loading="lazy">
+      </div>
+      <div class="gallery-item" data-src="images/photography/2-DSC01089-Enhanced-NR.jpg" data-type="image">
+        <img src="images/photography/2-DSC01089-Enhanced-NR.jpg" alt="Photography by Armaan Jhajj" loading="lazy">
+      </div>
+      <div class="gallery-item" data-src="images/photography/3-DSC01525.jpg" data-type="image">
+        <img src="images/photography/3-DSC01525.jpg" alt="Photography by Armaan Jhajj" loading="lazy">
+      </div>
+      <div class="gallery-item" data-src="images/photography/4-DSC01586.jpg" data-type="image">
+        <img src="images/photography/4-DSC01586.jpg" alt="Photography by Armaan Jhajj" loading="lazy">
+      </div>
+      <div class="gallery-item" data-src="images/photography/5-DSC01632.jpg" data-type="image">
+        <img src="images/photography/5-DSC01632.jpg" alt="Photography by Armaan Jhajj" loading="lazy">
+      </div>
+      <div class="gallery-item" data-src="images/photography/6-DSC01639.jpg" data-type="image">
+        <img src="images/photography/6-DSC01639.jpg" alt="Photography by Armaan Jhajj" loading="lazy">
+      </div>
+      <div class="gallery-item" data-src="images/photography/7-DSC01641.jpg" data-type="image">
+        <img src="images/photography/7-DSC01641.jpg" alt="Photography by Armaan Jhajj" loading="lazy">
+      </div>
+      <div class="gallery-item" data-src="images/photography/8-DSC01701.jpg" data-type="image">
+        <img src="images/photography/8-DSC01701.jpg" alt="Photography by Armaan Jhajj" loading="lazy">
+      </div>
+      <div class="gallery-item" data-src="images/photography/9-DSC01732.jpg" data-type="image">
+        <img src="images/photography/9-DSC01732.jpg" alt="Photography by Armaan Jhajj" loading="lazy">
+      </div>
+      <div class="gallery-item" data-src="images/photography/10-DSC01786.jpg" data-type="image">
+        <img src="images/photography/10-DSC01786.jpg" alt="Photography by Armaan Jhajj" loading="lazy">
+      </div>
+      <div class="gallery-item" data-src="images/photography/13-IMG_1646.jpg" data-type="image">
+        <img src="images/photography/13-IMG_1646.jpg" alt="Photography by Armaan Jhajj" loading="lazy">
+      </div>
+      <div class="gallery-item" data-src="images/photography/14-_DSC2392.jpg" data-type="image">
+        <img src="images/photography/14-_DSC2392.jpg" alt="Photography by Armaan Jhajj" loading="lazy">
+      </div>
+      <div class="gallery-item" data-src="images/photography/16-IMG_9693.jpg" data-type="image">
+        <img src="images/photography/16-IMG_9693.jpg" alt="Photography by Armaan Jhajj" loading="lazy">
+      </div>
+      <div class="gallery-item" data-src="images/photography/17-IMG_9697.jpg" data-type="image">
+        <img src="images/photography/17-IMG_9697.jpg" alt="Photography by Armaan Jhajj" loading="lazy">
+      </div>
+      <div class="gallery-item" data-src="images/photography/IMG_5474.JPG" data-type="image">
+        <img src="images/photography/IMG_5474.JPG" alt="Photography by Armaan Jhajj" loading="lazy">
+      </div>
+      <div class="gallery-item" data-src="images/photography/IMG_5548.JPG" data-type="image">
+        <img src="images/photography/IMG_5548.JPG" alt="Photography by Armaan Jhajj" loading="lazy">
+      </div>
+      <div class="gallery-item" data-src="images/photography/IMG_5646.JPG" data-type="image">
+        <img src="images/photography/IMG_5646.JPG" alt="Photography by Armaan Jhajj" loading="lazy">
+      </div>
+    </div>
+
+    <nav>
+      <a href="gallery.html">back to gallery</a> // <a href="/">home</a>
+    </nav>
+  </main>
+  
+  <!-- Lightbox -->
+  <div class="lightbox" id="lightbox">
+    <span class="lightbox-close" id="close">&times;</span>
+    <span class="lightbox-nav lightbox-prev" id="prev">&#10094;</span>
+    <span class="lightbox-nav lightbox-next" id="next">&#10095;</span>
+    <img class="lightbox-content" id="lightbox-img">
+  </div>
+
+  <script>
+    // Lightbox functionality
+    const lightbox = document.getElementById('lightbox');
+    const lightboxImg = document.getElementById('lightbox-img');
+    const close = document.getElementById('close');
+    const galleryItems = document.querySelectorAll('.gallery-item');
+    let currentIndex = 0;
+
+    function showLightbox(index) {
+      currentIndex = index;
+      const item = galleryItems[index];
+      const src = item.dataset.src;
+      lightboxImg.src = src;
+      lightbox.classList.add('active');
+    }
+
+    function closeLightbox() {
+      lightbox.classList.remove('active');
+    }
+
+    galleryItems.forEach((item, index) => {
+      item.addEventListener('click', () => showLightbox(index));
+    });
+
+    close.addEventListener('click', closeLightbox);
+    lightbox.addEventListener('click', (e) => {
+      if (e.target === lightbox) closeLightbox();
+    });
+
+    document.getElementById('prev').addEventListener('click', () => {
+      currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+      showLightbox(currentIndex);
+    });
+
+    document.getElementById('next').addEventListener('click', () => {
+      currentIndex = (currentIndex + 1) % galleryItems.length;
+      showLightbox(currentIndex);
+    });
+
+    // Keyboard navigation
+    document.addEventListener('keydown', (e) => {
+      if (!lightbox.classList.contains('active')) return;
+      if (e.key === 'Escape') closeLightbox();
+      if (e.key === 'ArrowLeft') document.getElementById('prev').click();
+      if (e.key === 'ArrowRight') document.getElementById('next').click();
+    });
+  </script>
+</body>
+</html>
