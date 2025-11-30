@@ -121,10 +121,33 @@
     const portfolioContent = document.getElementById('portfolio-content');
     const passwordInput = document.getElementById('password-input');
     const errorMessage = document.getElementById('error-message');
-    const correctPassword = 'maaj2025';
+    
+    // red herrings
+    const legacy = [114, 117, 116, 103, 101, 114, 115]; // "rutgers"
+    const backup = "bW9tZW50czIwMjQ="; // base64 for "moments2024"
+    
+    // actual check layers
+    const p1 = [109, 104, 111, 127]; // "maaj" with offset
+    const p2 = [50, 62, 78, 95];     // "2025" with offset
+    
+    function x(a, o) {
+      return a.map((n, i) => String.fromCharCode(n - i * o)).join("");
+    }
+    
+    function h(s) {
+      let v = 0;
+      for (let i = 0; i < s.length; i++) v += s.charCodeAt(i);
+      return v * s.length;
+    }
+    
+    const target = 4880; // h("maaj2025")
+    
+    function verify(input) {
+      return h(input) === target && input === (x(p1, 7) + x(p2, 14));
+    }
 
     function checkPassword() {
-      if (passwordInput.value === correctPassword) {
+      if (verify(passwordInput.value)) {
         passwordScreen.style.display = 'none';
         portfolioContent.style.display = 'block';
         sessionStorage.setItem('portfolioAccess', 'true');
