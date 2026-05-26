@@ -77,7 +77,7 @@
     <nav>
       <a href="about.html">about</a>
       <span> // </span>
-      <a href="portfolio.html">portfolio</a>
+      <a href="mcat.html">mcat</a>
       <span> // </span>
       <a href="gallery.html">gallery</a>
       <span> // </span>
@@ -115,8 +115,8 @@
         hour12: true, timeZoneName: 'short'
       });
       // Result like: 11:04:21 AM EDT
-      const parts = fmt.format(now);
-      nycEl.textContent = `time in new york city — ${parts.toLowerCase()}`;
+      const parts = fmt.format(now).toLowerCase();
+      nycEl.textContent = `time in new york city — ${parts.replace('edt', 'est')}`;
     }
     formatNYCTime();
     setInterval(formatNYCTime, 1000);
